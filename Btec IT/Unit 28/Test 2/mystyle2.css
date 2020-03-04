@@ -1,0 +1,468 @@
+
+p  {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: helvetica;
+  font-size: 20px;
+
+}
+p {
+  font-style: italic;
+}
+a {
+  color: white;
+  text-align: center;
+}
+
+a {
+  font-family: helvetica;
+  font-size: 36px;
+
+}
+a {
+  font-style: italic;
+
+.block {
+  color: white;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  font-family: helvetica;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 235px;
+  border: 3px solid #6B099F;
+  border-right: none;
+  padding: 5px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #6B099F;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.searchTerm:focus{
+  color: #6B099F;
+}
+
+.searchButton {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #6B099F;
+  background: #6B099F;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 282px;
+  length: 61px;
+  position: absolute;
+  top: 155px;
+  left: 1240px;
+  transform: translate(-50%, -50%);
+}
+body {
+  background-image: url("Background.png");
+}
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#Search3 {
+  position: absolute;
+  top: 125px;
+  left: 1100px;
+}
+#SearchIcon {
+  position: absolute;
+  top: 137px;
+  left: 1340px;
+}
+#BasketButton {
+  position: absolute;
+  top: 125px;
+  left: 200px;
+}
+#LoginButton {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+#HelpButton {
+  position: absolute;
+  top: 5px;
+  left: 1250px;
+}
+#Arrows {
+  position: absolute;
+  top: 1000px;
+}
+#Trending {
+  position: absolute;
+  left: 0px;
+  top: 838px;
+}
+#ShowPic {
+  position: absolute;
+  left: 0px;
+  top: 188px;
+  width: 1000px;
+}
+#Blackting {
+  position: absolute;
+  left: 0px;
+  top: 460px;
+  length: 1000px;
+}
+#Purpleting {
+  position: absolute;
+  left: 0px;
+  top: 1173px;
+  length: 1000px;
+}
+#BannerThing {
+  position: absolute;
+  left: 0px;
+  top: 1400px;
+}
+#Titleting {
+  position: absolute;
+  left: 10px;
+  top: 285px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 56px;
+  font-weight: 400;
+}
+#SignUp {
+  position: absolute;
+  top: 730px;
+  left: 5px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+.block1 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  color: white;
+  font-style: italic;
+}
+.block2 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 288px;
+  color: white;
+  font-style: italic;
+}
+.block3 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 12px 0px;
+	font-size: 38px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 571px;
+  color: #6B099F;
+  font-style: italic;
+}
+.block4 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 854px;
+  color: white;
+  font-style: italic;
+}
+.block5 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 1137px;
+  color: white;
+  font-style: italic;
+}
+.block6 {
+  display: block;
+	width: 585px;
+	length: 500px;
+	border: none;
+	background-color: ;
+	padding:65px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 73px;
+  left: 420px;
+  color: white;
+  font-style: italic;
+  opacity: 0
+}
+.block7 {
+  display: block;
+	width: 200px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 680px;
+  left: 5px;
+  color: white;
+  font-style: italic;
+}
+#zero {
+  display: block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 400px;
+  left: 5px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#zero:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+#one {
+  display: block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 665px;
+  left: 5px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#one:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+#two {
+  display: block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 930px;
+  left: 5px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#two:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+#three {
+  display: block;
+	border: none;
+	text-align: center;
+  position: absolute;
+  top: 400px;
+  left: 650px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 500px;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+#priceting{
+  position: absolute;
+  top: 73px;
+  left: 420px;
+  color: white;
+  font-style: italic;
+  font-size: 34px;
+  font-family: helvetica;
+}
+#Productname {
+  position: absolute;
+  top: 420px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Price {
+  position: absolute;
+  top: 460px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Gender {
+  position: absolute;
+  top: 500px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Size {
+  position: absolute;
+  top: 540px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#QuantityLbl {
+  position: absolute;
+  top: 560px;
+  left:500px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.search2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm2 {
+  width: 500px;
+  border: 3px solid #6B099F;
+  padding: 5px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #6B099F;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.searchTerm2:focus{
+  color: #6B099F;
+}
+
+
+.wrap2{
+  width: 1000px;
+  length: 61px;
+  position: absolute;
+  top: 500px;
+  left: 5px;
+}

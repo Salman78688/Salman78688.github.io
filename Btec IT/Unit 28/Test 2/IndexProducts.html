@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*The main font of the website*/
+body{
+  font-family: helvetica;
+}
+/*The Search Function*/
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 235px;
+  border: 3px solid #6B099F;
+  border-right: none;
+  padding: 5px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #6B099F;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.searchTerm:focus{
+  color: #6B099F;
+}
+
+.searchButton {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #6B099F;
+  background: #6B099F;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 282px;
+  length: 61px;
+  position: absolute;
+  top: 155px;
+  left: 1240px;
+  transform: translate(-50%, -50%);
+}
+/*The Background of the website*/
+body {
+  background-image: url("Background.png");
+}
+/*The Social Media Corner Icons*/
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+/*The Position Of The Search Bar*/
+#Search3 {
+  position: absolute;
+  top: 125px;
+  left: 1100px;
+}
+/*The Position Of The Search Icon*/
+#SearchIcon {
+  position: absolute;
+  top: 137px;
+  left: 1340px;
+}
+/*The Position Of The Basket Button*/
+#BasketButton {
+  position: absolute;
+  top: 125px;
+  left: 200px;
+/*The Position Of The login Button*/
+}
+#LoginButton {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+/*The Position Of The Help Button*/
+#HelpButton {
+  position: absolute;
+  top: 5px;
+  left: 1250px;
+}
+/*The Position Of The Banner*/
+#BannerThing {
+  position: absolute;
+  left: 0px;
+  top: 1400px;
+}
+#ProdImg {
+  position: absolute;
+  left: 42px;
+  top: 529px;
+}
+#ProdImg2 {
+  position: absolute;
+  left: 42px;
+  top: 973px;
+}
+/*The Settings Of The Title*/
+#Titleting {
+  position: absolute;
+  left: 10px;
+  top: 285px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 56px;
+  font-weight: 400;
+}
+/*The Settings Of The Refine Image*/
+#RefineTing {
+  position: absolute;
+  left: 0px;
+  top: 381px;
+}
+/*The Settings Of The Products' Information*/
+#Productname1 {
+  position: absolute;
+  left: 16px;
+  top: 800px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price1 {
+  position: absolute;
+  left: 16px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender1 {
+  position: absolute;
+  left: 234px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock1 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #1c032a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 850px;
+  left: 10px;
+  color: white;
+  font-style: italic;
+}
+#Productname2 {
+  position: absolute;
+  left: 291px;
+  top: 800px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price2 {
+  position: absolute;
+  left: 299px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender2 {
+  position: absolute;
+  left: 518px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out2 {
+  position: absolute;
+  left: 370px;
+  top: 890px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock2 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 850px;
+  left: 293px;
+  color: white;
+  font-style: italic;
+}
+#Productname3 {
+  position: absolute;
+  left: 575px;
+  top: 800px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price3 {
+  position: absolute;
+  left: 581px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender3 {
+  position: absolute;
+  left: 800px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out3 {
+  position: absolute;
+  left: 650px;
+  top: 890px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock3 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 850px;
+  left: 576px;
+  color: white;
+  font-style: italic;
+}
+#Productname4 {
+  position: absolute;
+  left: 873px;
+  top: 800px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price4 {
+  position: absolute;
+  left: 864px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender4 {
+  position: absolute;
+  left: 1082px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out4 {
+  position: absolute;
+  left: 935px;
+  top: 890px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock4 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 850px;
+  left: 858px;
+  color: white;
+  font-style: italic;
+}
+#Productname5 {
+  position: absolute;
+  left: 1147px;
+  top: 800px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price5 {
+  position: absolute;
+  left: 1147px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender5 {
+  position: absolute;
+  left: 1365px;
+  top: 890px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out5 {
+  position: absolute;
+  left: 1220px;
+  top: 890px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock5 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 850px;
+  left: 1142px;
+  color: white;
+  font-style: italic;
+}
+#Productname6 {
+  position: absolute;
+  left: 48px;
+  top: 1245px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Productname6_5 {
+  position: absolute;
+  left: 60px;
+  top: 1265px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price6 {
+  position: absolute;
+  left: 16px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender6 {
+  position: absolute;
+  left: 234px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out6 {
+  position: absolute;
+  left: 85px;
+  top: 1335px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock6 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1295px;
+  left: 10px;
+  color: white;
+  font-style: italic;
+}
+#Productname7 {
+  position: absolute;
+  left: 333px;
+  top: 1245px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Productname7_5 {
+  position: absolute;
+  left: 360px;
+  top: 1265px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price7 {
+  position: absolute;
+  left: 299px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender7 {
+  position: absolute;
+  left: 518px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out7 {
+  position: absolute;
+  left: 370px;
+  top: 1335px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock7 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1295px;
+  left: 293px;
+  color: white;
+  font-style: italic;
+}
+#Productname8 {
+  position: absolute;
+  left: 610px;
+  top: 1245px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Productname8_5 {
+  position: absolute;
+  left: 641px;
+  top: 1265px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price8 {
+  position: absolute;
+  left: 581px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender8 {
+  position: absolute;
+  left: 800px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out8 {
+  position: absolute;
+  left: 650px;
+  top: 1335px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock8 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1295px;
+  left: 576px;
+  color: white;
+  font-style: italic;
+}
+#Productname9 {
+  position: absolute;
+  left: 873px;
+  top: 1245px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Productname9_5 {
+  position: absolute;
+  left: 960px;
+  top: 1265px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price9 {
+  position: absolute;
+  left: 864px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender9 {
+  position: absolute;
+  left: 1082px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out9 {
+  position: absolute;
+  left: 935px;
+  top: 1335px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock9 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1295px;
+  left: 858px;
+  color: white;
+  font-style: italic;
+}
+#Productname10 {
+  position: absolute;
+  left: 1152px;
+  top: 1245px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Price10 {
+  position: absolute;
+  left: 1147px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Gender10 {
+  position: absolute;
+  left: 1365px;
+  top: 1335px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+#Out10 {
+  position: absolute;
+  left: 1220px;
+  top: 1335px;
+  color: Grey;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 400;
+}
+.basketblock10 {
+	display: block;
+	width: 269px;
+	length: 55px;
+	border: none;
+	background-color: #22132a;
+	padding: 14px 0px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1295px;
+  left: 1142px;
+  color: white;
+  font-style: italic;
+}
+/*The Settings Of The Page Number*/
+#PageThing {
+  position: absolute;
+  top: 1397px;
+  left: 615px;
+  color: White;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+/*The Settings Of Navigation Buttons*/
+.block1 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  color: white;
+  font-style: italic;
+}
+.block2 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 288px;
+  color: white;
+  font-style: italic;
+}
+.block3 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 12px 0px;
+	font-size: 38px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 571px;
+  color: #6B099F;
+  font-style: italic;
+}
+.block4 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 854px;
+  color: white;
+  font-style: italic;
+}
+.block5 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 1137px;
+  color: white;
+  font-style: italic;
+}
+.block6 {
+  display: block;
+	width: 585px;
+	length: 500px;
+	border: none;
+	background-color: ;
+	padding:65px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 73px;
+  left: 420px;
+  color: white;
+  font-style: italic;
+  opacity: 0
+}
+.block7 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 5px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block7:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block8 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 288px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block8:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block9 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 571px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block9:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block10 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 854px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block10:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block11 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 1137px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block11:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block12 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 5px;
+  color: Black;
+  font-style: italic;
+  border: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block12:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block13 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 288px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block13:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block14 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 571px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block14:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block15 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 854px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block15:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block16 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 1137px;
+  color: Black;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block16:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block17 {
+  display: block;
+	width: 142px;
+	length: 22px;
+	border: none;
+  background-image: linear-gradient(#0d0d0d, #22132a);
+	padding: 5px 0px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1410px;
+  left: 423px;
+  color: White;
+  font-style: italic;
+  font-weight: 800;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block17:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block18 {
+  display: block;
+	width: 142px;
+	length: 22px;
+	border: none;
+  background-image: linear-gradient(black, #1c032a);
+	padding: 5px 0px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1410px;
+  left: 854px;
+  color: White;
+  font-style: italic;
+  font-weight: 800;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block18:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+</style>
+</head>
+<body>
+/*The Banner*/
+<img id=BannerThing src="/Btec IT/Unit 28/Test 2/Resources/Banner Thing.png" alt="Banner Thing">
+/*The Social Media Icons*/
+<img src="/Btec IT/Unit 28/Test 2/Resources/Social TINGZ.png" alt="Social TINGZ">
+/*The Navigation Bar, Including Buttons*/
+<div class="container">
+	<img src="/Btec IT/Unit 28/Test 2/Resources/NAV.png" alt="NAV" width="100%">
+	<br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/>
+  <button onclick="location.href = 'IndexProducts.html';" type="button" class="block1">MEN</button>
+  <button onclick="location.href = 'IndexWomenProducts.html';" type="button" class="block2">WOMEN</button>
+  <button onclick="location.href = 'IndexProducts.html';" type="button" class="block3">NEW</button>
+  <button onclick="location.href = 'IndexKidsProducts.html';" type="button" class="block4">KIDS</button>
+  <button onclick="location.href = 'IndexSalesProducts.html';" type="button" class="block5">SALES</button>
+  <button onclick="location.href = 'Index.html';" type="button" class="block6">SALES</button>
+  <button type="button" class="block7">MEN</button>
+  <button type="button" class="block8">WOMEN</button>
+  <button type="button" class="block9">NEW</button>
+  <button type="button" class="block10">KIDS</button>
+  <button type="button" class="block11">SALES</button>
+  <button type="button" class="block12">MEN</button>
+  <button type="button" class="block13">WOMEN</button>
+  <button type="button" class="block14">NEW</button>
+  <button type="button" class="block15">KIDS</button>
+  <button type="button" class="block16">SALES</button>
+  <button type="button" class="block17">< PREVIOUS <</button>
+  <button onclick="location.href = 'IndexProducts2.html';" type="button" class="block18">> NEXT ></button>
+  <form action="/Btec IT/Unit 28/Test 2/IndexBasket.html">
+    <input id=BasketButton onclick="location.href = 'IndexBasket.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/Basket.png" alt="BasketButton">
+  </form>
+  <form action="/Btec IT/Unit 28/Test 2/IndexLogin.html">
+    <input id=LoginButton onclick="location.href = 'IndexLogin.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/LoginBtn.png" alt="LoginButton">
+  </form>
+  <form action="/Btec IT/Unit 28/Test 2/IndexHelp.html">
+    <input id=HelpButton onclick="location.href = 'IndexHelp.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/HelpBtn.png" alt="HelpButton">
+  </form>
+/*The Search Button*/
+<img id=Search3 src="/Btec IT/Unit 28/Test 2/Resources/Search.png" alt="Search3">
+<div class="wrap">
+  <div class="search">
+    <input type="text" class="searchTerm" placeholder="Search">
+    <button type="submit" class="searchButton">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>
+<img id=SearchIcon src="/Btec IT/Unit 28/Test 2/Resources/Icon Search.png" alt="Search Icon">
+/*The Title*/
+<h1 id=Titleting>MEN'S CLOTHING</h1>
+/*The Product Images*/
+<img id=ProdImg src="/Btec IT/Unit 28/Test 2/Resources/Product Images.png" alt="Product Images">
+<img id=ProdImg2 src="/Btec IT/Unit 28/Test 2/Resources/Product Images 2.png" alt="Product Images 2">
+/*The Refine Image*/
+<img id=RefineTing src="/Btec IT/Unit 28/Test 2/Resources/Refine Ting.png" alt="RefineTing">
+/*The Product's Information*/
+<div>
+  <h1 id=Productname1>BLACK & PURPLE LOGO HOODIE</h1>
+  <h1 id=Price1>£55.00</h1>
+  <h1 id=Gender1>MEN</h1>
+  <button onclick="location.href = 'IndexBasket2.html';" type="button" class="basketblock1">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname2>BLACK & PURPLE LOGO JOGGERS</h1>
+  <h1 id=Price2>£50.00</h1>
+  <h1 id=Gender2>MEN</h1>
+  <h1 id=Out2>OUT OF STOCK</h1>
+  <button type="button" class="basketblock2">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname3>WHITE 'SHUTDOWN' SWEATSHIRT</h1>
+  <h1 id=Price3>£55.00</h1>
+  <h1 id=Gender3>MEN</h1>
+  <h1 id=Out3>OUT OF STOCK</h1>
+  <button type="button" class="basketblock3">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname4>WHITE 'SHUTDOWN' JOGGERS</h1>
+  <h1 id=Price4>£50.00</h1>
+  <h1 id=Gender4>MEN</h1>
+  <h1 id=Out4>OUT OF STOCK</h1>
+  <button type="button" class="basketblock4">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname5>BLACK & PURPLE LOGO T-SHIRT</h1>
+  <h1 id=Price5>£28.00</h1>
+  <h1 id=Gender5>MEN</h1>
+  <h1 id=Out5>OUT OF STOCK</h1>
+  <button type="button" class="basketblock5">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname6>BLACK & PURPLE LOGO</h1>
+  <h1 id=Productname6_5>SOFTSHELL JACKET</h1>
+  <h1 id=Price6>£75.00</h1>
+  <h1 id=Gender6>MEN</h1>
+  <h1 id=Out6>OUT OF STOCK</h1>
+  <button type="button" class="basketblock6">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname7>BLACK & PURPLE LOGO</h1>
+  <h1 id=Productname7_5>PUFFER JACKET</h1>
+  <h1 id=Price7>£105.00</h1>
+  <h1 id=Gender7>MEN</h1>
+  <h1 id=Out7>OUT OF STOCK</h1>
+  <button type="button" class="basketblock7">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname8>AIR JORDAN 1 X EGLVZN</h1>
+  <h1 id=Productname8_5>COURT PURPLE</h1>
+  <h1 id=Price8>£105.00</h1>
+  <h1 id=Gender8>MEN</h1>
+  <h1 id=Out8>OUT OF STOCK</h1>
+  <button type="button" class="basketblock8">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname9>BLACK & PURPLE LOGO CUFF</h1>
+  <h1 id=Productname9_5>BEANIE</h1>
+  <h1 id=Price9>£25.00</h1>
+  <h1 id=Gender9>MEN</h1>
+  <h1 id=Out9>OUT OF STOCK</h1>
+  <button type="button" class="basketblock9">ADD TO BASKET</button>
+</div>
+<div>
+  <h1 id=Productname10>PURPLE LOGO SNAPBACK CAP</h1>
+  <h1 id=Price10>£25.00</h1>
+  <h1 id=Gender10>MEN</h1>
+  <h1 id=Out10>OUT OF STOCK</h1>
+  <button type="button" class="basketblock10">ADD TO BASKET</button>
+</div>
+/*The Page Number*/
+<h1 id=PageThing>| 1 OF 2 | 10 OF 20 |</h1>
+</body>
+</html>

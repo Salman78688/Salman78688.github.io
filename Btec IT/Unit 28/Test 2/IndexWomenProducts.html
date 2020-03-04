@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*The main font of the website*/
+body{
+  font-family: helvetica;
+}
+/*The Search Function*/
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 235px;
+  border: 3px solid #6B099F;
+  border-right: none;
+  padding: 5px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #6B099F;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.searchTerm:focus{
+  color: #6B099F;
+}
+
+.searchButton {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #6B099F;
+  background: #6B099F;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 282px;
+  length: 61px;
+  position: absolute;
+  top: 155px;
+  left: 1240px;
+  transform: translate(-50%, -50%);
+}
+/*The Background of the website*/
+body {
+  background-image: url("Background.png");
+}
+/*The Social Media Corner Icons*/
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+/*The Position Of The Search Bar*/
+#Search3 {
+  position: absolute;
+  top: 125px;
+  left: 1100px;
+}
+/*The Position Of The Search Icon*/
+#SearchIcon {
+  position: absolute;
+  top: 137px;
+  left: 1340px;
+}
+/*The Position Of The Basket Button*/
+#BasketButton {
+  position: absolute;
+  top: 125px;
+  left: 200px;
+/*The Position Of The login Button*/
+}
+#LoginButton {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+/*The Position Of The Help Button*/
+#HelpButton {
+  position: absolute;
+  top: 5px;
+  left: 1250px;
+}
+/*The Position Of The Banner*/
+#BannerThing {
+  position: absolute;
+  left: 0px;
+  top: 1400px;
+}
+/*The Title Settings*/
+#Titleting {
+  position: absolute;
+  left: 10px;
+  top: 285px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 56px;
+  font-weight: 400;
+}
+/*The Refine Image Position*/
+#RefineTing {
+  position: absolute;
+  left: 0px;
+  top: 381px;
+}
+/*The Navigation Buttons Settings*/
+.block1 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  color: white;
+  font-style: italic;
+}
+.block2 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 288px;
+  color: white;
+  font-style: italic;
+}
+.block3 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 12px 0px;
+	font-size: 38px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 571px;
+  color: #6B099F;
+  font-style: italic;
+}
+.block4 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 854px;
+  color: white;
+  font-style: italic;
+}
+.block5 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 1137px;
+  color: white;
+  font-style: italic;
+}
+.block6 {
+  display: block;
+	width: 585px;
+	length: 500px;
+	border: none;
+	background-color: ;
+	padding:65px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 73px;
+  left: 420px;
+  color: white;
+  font-style: italic;
+  opacity: 0
+}
+.block7 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 5px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block7:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block8 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 288px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block8:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block9 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 571px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block9:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block10 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 854px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block10:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block11 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 1137px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block11:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block12 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 5px;
+  color: #1c032a;
+  font-style: italic;
+  border: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block12:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block13 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 288px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block13:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block14 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 571px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block14:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block15 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 854px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block15:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block16 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 200px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 944px;
+  left: 1137px;
+  color: #1c032a;
+  font-style: italic;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block16:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block17 {
+  display: block;
+	width: 142px;
+	length: 22px;
+	border: none;
+  background-image: linear-gradient(black, #1c032a);
+	padding: 5px 0px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1410px;
+  left: 423px;
+  color: White;
+  font-style: italic;
+  font-weight: 800;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block17:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+.block18 {
+  display: block;
+	width: 142px;
+	length: 22px;
+	border: none;
+  background-image: linear-gradient(#0d0d0d, #22132a);
+	padding: 5px 0px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 1410px;
+  left: 854px;
+  color: White;
+  font-style: italic;
+  font-weight: 800;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.block18:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+</style>
+</head>
+<body>
+/*The Banner*/
+<img id=BannerThing src="/Btec IT/Unit 28/Test 2/Resources/Banner Thing.png" alt="Banner Thing">
+/*The Social Media Icons*/
+<img src="/Btec IT/Unit 28/Test 2/Resources/Social TINGZ.png" alt="Social TINGZ">
+/*The Navigation Bar, Including The Buttons*/
+<div class="container">
+	<img src="/Btec IT/Unit 28/Test 2/Resources/NAV.png" alt="NAV" width="100%">
+	<br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/>
+  <button onclick="location.href = 'IndexProducts.html';" type="button" class="block1">MEN</button>
+  <button onclick="location.href = 'IndexWomenProducts.html';" type="button" class="block2">WOMEN</button>
+  <button onclick="location.href = 'IndexProducts.html';" type="button" class="block3">NEW</button>
+  <button onclick="location.href = 'IndexKidsProducts.html';" type="button" class="block4">KIDS</button>
+  <button onclick="location.href = 'IndexSalesProducts.html';" type="button" class="block5">SALES</button>
+  <button onclick="location.href = 'Index.html';" type="button" class="block6">SALES</button>
+  <button type="button" class="block7">COMING SOON</button>
+  <button type="button" class="block8">COMING SOON</button>
+  <button type="button" class="block9">COMING SOON</button>
+  <button type="button" class="block10">COMING SOON</button>
+  <button type="button" class="block11">COMING SOON</button>
+  <button type="button" class="block12">COMING SOON</button>
+  <button type="button" class="block13">COMING SOON</button>
+  <button type="button" class="block14">COMING SOON</button>
+  <button type="button" class="block15">COMING SOON</button>
+  <button type="button" class="block16">COMING SOON</button>
+  <form action="/Btec IT/Unit 28/Test 2/IndexBasket.html">
+    <input id=BasketButton onclick="location.href = 'IndexBasket.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/Basket.png" alt="BasketButton">
+  </form>
+  <form action="/Btec IT/Unit 28/Test 2/IndexLogin.html">
+    <input id=LoginButton onclick="location.href = 'IndexLogin.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/LoginBtn.png" alt="LoginButton">
+  </form>
+  <form action="/Btec IT/Unit 28/Test 2/IndexHelp.html">
+    <input id=HelpButton onclick="location.href = 'IndexHelp.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/HelpBtn.png" alt="HelpButton">
+  </form>
+/*The Search Bar*/
+<img id=Search3 src="/Btec IT/Unit 28/Test 2/Resources/Search.png" alt="Search3">
+<div class="wrap">
+  <div class="search">
+    <input type="text" class="searchTerm" placeholder="Search">
+    <button type="submit" class="searchButton">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>
+<img id=SearchIcon src="/Btec IT/Unit 28/Test 2/Resources/Icon Search.png" alt="Search Icon">
+/*The Title*/
+<h1 id=Titleting>WOMEN'S CLOTHING</h1>
+<img id=RefineTing src="/Btec IT/Unit 28/Test 2/Resources/Refine Ting.png" alt="RefineTing">
+</body>
+</html>

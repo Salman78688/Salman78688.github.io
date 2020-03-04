@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*The main font of the website*/
+body{
+  font-family: helvetica;
+}
+/*The Search Function*/
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 235px;
+  border: 3px solid #6B099F;
+  border-right: none;
+  padding: 5px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #6B099F;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.searchTerm:focus{
+  color: #6B099F;
+}
+
+.searchButton {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #6B099F;
+  background: #6B099F;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 282px;
+  length: 61px;
+  position: absolute;
+  top: 155px;
+  left: 1240px;
+  transform: translate(-50%, -50%);
+}
+/*The Background of the website*/
+body {
+  background-image: url("Background.png");
+}
+/*The Social Media Corner Icons*/
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+/*The Position Of The Search Bar*/
+#Search3 {
+  position: absolute;
+  top: 125px;
+  left: 1100px;
+}
+/*The Position Of The Search Icon*/
+#SearchIcon {
+  position: absolute;
+  top: 137px;
+  left: 1340px;
+}
+/*The Position Of The Basket Button*/
+#BasketButton {
+  position: absolute;
+  top: 125px;
+  left: 200px;
+/*The Position Of The login Button*/
+}
+#LoginButton {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+/*The Position Of The Help Button*/
+#HelpButton {
+  position: absolute;
+  top: 5px;
+  left: 1250px;
+}
+/*The Position Of The Banner*/
+#BannerThing {
+  position: absolute;
+  left: 0px;
+  top: 1400px;
+}
+/*The Settings Of The Title*/
+#Titleting {
+  position: absolute;
+  left: 10px;
+  top: 285px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 56px;
+  font-weight: 400;
+}
+/*The Settings Of The Title 2*/
+#Titleting2 {
+  position: absolute;
+  top: 370px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 56px;
+  font-weight: 400;
+}
+/*The Settings Of The CheckOut Information*/
+#Discount {
+  position: absolute;
+  top: 570px;
+  left: 660px;
+}
+#DiscountLbl {
+  position: absolute;
+  top: 500px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 36px;
+  font-weight: 400;
+}
+#SubtotalLbl {
+  position: absolute;
+  top: 650px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 36px;
+  font-weight: 400;
+}
+#Subtotal {
+  position: absolute;
+  top: 700px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 24px;
+  font-weight: 400;
+}
+#EDAHLbl {
+  position: absolute;
+  top: 730px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 36px;
+  font-weight: 400;
+}
+#EDAH {
+  position: absolute;
+  top: 780px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 24px;
+  font-weight: 400;
+}
+#TotalLbl {
+  position: absolute;
+  top: 820px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 48px;
+  font-weight: 400;
+}
+#Total {
+  position: absolute;
+  top: 880px;
+  left: 660px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 36px;
+  font-weight: 400;
+}
+/*The Settings Of The CheckOut Pictures*/
+#CheckoutButton {
+	display: block;
+	border: none;
+	cursor: pointer;
+  position: absolute;
+  top: 969px;
+  left: 660px;
+}
+#PayPalButton {
+	display: block;
+	border: none;
+	cursor: pointer;
+  position: absolute;
+  top: 1084px;
+  left: 660px;
+}
+/*The Settings Of The QUANTITY*/
+#quan {
+	border: none;
+	cursor: pointer;
+  position: absolute;
+  top: 600px;
+  left: 525px;
+}
+#Arrowting {
+	display: block;
+	border: none;
+	cursor: pointer;
+  position: absolute;
+  top: 600px;
+  left: 580px;
+  cursor: pointer;
+}
+/*The Settings Of The Navigation Buttons*/
+.block1 {
+	display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  color: white;
+  font-style: italic;
+}
+.block2 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 288px;
+  color: white;
+  font-style: italic;
+}
+.block3 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 12px 0px;
+	font-size: 38px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 571px;
+  color: #6B099F;
+  font-style: italic;
+}
+.block4 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 854px;
+  color: white;
+  font-style: italic;
+}
+.block5 {
+  display: block;
+	width: 278px;
+	length: 55px;
+	border: none;
+	background-color: black;
+	padding: 14px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 1137px;
+  color: white;
+  font-style: italic;
+}
+.block6 {
+  display: block;
+	width: 585px;
+	length: 500px;
+	border: none;
+	background-color: ;
+	padding:65px 0px;
+	font-size: 34px;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 73px;
+  left: 420px;
+  color: white;
+  font-style: italic;
+  opacity: 0
+}
+/*The Settings Of The Panels*/
+#zero {
+  display: block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 400px;
+  left: 5px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#zero:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+#one {
+  display: block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 665px;
+  left: 5px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#one:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+#two {
+  display: block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+  position: absolute;
+  top: 930px;
+  left: 5px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#two:hover {
+  box-shadow: inset 0 0 20px #6B099F, 0 0 20px #990de4;
+  outline-color: #1c032a;
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+#three {
+  display: block;
+	border: none;
+	text-align: center;
+  position: absolute;
+  top: 400px;
+  left: 650px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+/*The Settings Of The Product Information*/
+#priceting{
+  position: absolute;
+  top: 73px;
+  left: 420px;
+  color: white;
+  font-style: italic;
+  font-size: 34px;
+  font-family: helvetica;
+}
+#Productname {
+  position: absolute;
+  top: 420px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Price {
+  position: absolute;
+  top: 460px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Gender {
+  position: absolute;
+  top: 500px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Size {
+  position: absolute;
+  top: 540px;
+  left: 210px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#QuantityLbl {
+  position: absolute;
+  top: 560px;
+  left:500px;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+#Remove {
+  position: absolute;
+  top: 600px;
+  left: 210px;
+  color: #6B099F;
+  font-style: italic;
+  text-decoration: underline;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 400;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+/*The Title*/
+<h1 id=Titleting>BASKET</h1>
+/*The Banner*/
+<img id=BannerThing src="/Btec IT/Unit 28/Test 2/Resources/Banner Thing.png" alt="Banner Thing">
+/*The Social Media Icons*/
+<img src="/Btec IT/Unit 28/Test 2/Resources/Social TINGZ.png" alt="Social TINGZ">
+/*The Navigation Bar, Including The Buttons*/
+<div class="container">
+	<img src="/Btec IT/Unit 28/Test 2/Resources/NAV.png" alt="NAV" width="100%">
+	<br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/>
+  <button onclick="location.href = 'IndexProducts.html';" type="button" class="block1">MEN</button>
+  <button onclick="location.href = 'IndexWomenProducts.html';" type="button" class="block2">WOMEN</button>
+  <button onclick="location.href = 'IndexProducts.html';" type="button" class="block3">NEW</button>
+  <button onclick="location.href = 'IndexKidsProducts.html';" type="button" class="block4">KIDS</button>
+  <button onclick="location.href = 'IndexSalesProducts.html';" type="button" class="block5">SALES</button>
+  <button onclick="location.href = 'Index.html';" type="button" class="block6">SALES</button>
+  <form action="/Btec IT/Unit 28/Test 2/IndexBasket.html">
+    <input id=BasketButton onclick="location.href = 'IndexBasket.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/Basket.png" alt="BasketButton">
+  </form>
+  <form action="/Btec IT/Unit 28/Test 2/IndexLogin.html">
+    <input id=LoginButton onclick="location.href = 'IndexLogin.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/LoginBtn.png" alt="LoginButton">
+  </form>
+  <form action="/Btec IT/Unit 28/Test 2/IndexHelp.html">
+    <input id=HelpButton onclick="location.href = 'IndexHelp.html';" type="image" src="/Btec IT/Unit 28/Test 2/Resources/HelpBtn.png" alt="HelpButton">
+  </form>
+/*The Search Bar*/
+  <img id=Search3 src="/Btec IT/Unit 28/Test 2/Resources/Search.png" alt="Search3">
+  <div class="wrap">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="Search">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+<img id=SearchIcon src="/Btec IT/Unit 28/Test 2/Resources/Icon Search.png" alt="Search Icon">
+/*The Product Information And Checkout*/
+<img id=zero src="/Btec IT/Unit 28/Test 2/Resources/A.png" alt="zero">
+<img id=one src="/Btec IT/Unit 28/Test 2/Resources/1.png" alt="one">
+<img id=two src="/Btec IT/Unit 28/Test 2/Resources/2.png" alt="two">
+<img id=three src="/Btec IT/Unit 28/Test 2/Resources/3.png" alt="three">
+<h1 id=Titleting2>SUMMARY</h1>
+<img id=Discount src="/Btec IT/Unit 28/Test 2/Resources/Discount.png" alt="Discount">
+<h1 id=DiscountLbl>DISCOUNT?</h1>
+<h1 id=SubtotalLbl>SUBTOTAL:</h1>
+<h1 id=Subtotal>£55.00</h1>
+<h1 id=EDAHLbl>ESTIMATED DELIVERY & HANDLING:</h1>
+<h1 id=EDAH>£1.20</h1>
+<h1 id=TotalLbl>TOTAL:</h1>
+<h1 id=Total>£56.20</h1>
+<img onclick="location.href = 'IndexCheckOut.html';" id=CheckoutButton src="/Btec IT/Unit 28/Test 2/Resources/Checkout Button.png" alt="CheckoutButton">
+<img onclick="location.href = 'https://www.paypal.com/uk/signin';" id=PayPalButton src="/Btec IT/Unit 28/Test 2/Resources/PayPal Button.png" alt="PayPalButton">
+<div>
+  <img id=quan src="/Btec IT/Unit 28/Test 2/Resources/quan.png" alt="quan">
+  <img onclick="myFunction()" id=Arrowting src="/Btec IT/Unit 28/Test 2/Resources/Arrowting.png" alt="Arrowting">
+</div>
+
+<h1 id=Productname>MEN: BLACK & PURPLE LOGO HOODIE</h1>
+<h1 id=Price>PRICE: £55.00</h1>
+<h1 id=Gender>GENDER: MEN</h1>
+<h1 id=Size>SIZE: LARGE</h1>
+<h1 id=QuantityLbl>QUANTITY</h1>
+<h1 onclick="location.href = 'IndexBasket.html';" id=Remove>REMOVE</h1>
+
+<script>
+function myFunction() {
+  alert("Sorry, Only One In Stock...");
+}
+</script>
+</body>
+</html>
